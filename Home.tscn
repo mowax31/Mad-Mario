@@ -1,0 +1,143 @@
+[gd_scene load_steps=13 format=3 uid="uid://2pxmw5nohpsg"]
+
+[ext_resource type="Texture2D" uid="uid://bb3fpdpm7ky04" path="res://bg/rock.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://di3skypo70ln5" path="res://char/hero.png" id="2"]
+[ext_resource type="Script" path="res://char/hero.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://bg3rr6np2yva0" path="res://bg/wp9991529-fire-tower-wallpapers.jpg" id="4"]
+[ext_resource type="Texture2D" uid="uid://b1037yuuklf6y" path="res://bg/kisspng-game-tree-pc-game-old-tree-demon-in-game-5aa0f46fef6a32.7901959515204977759807.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://drypyk4bjbetx" path="res://bg/kisspng-video-games-multiplayer-video-game-cooperative-gam-80s-game-station-opengameart-org-5b68158248df03.8912890515335479062985.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://b4ht3rl2ehgxi" path="res://bg/pngwing.com (1).png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c105bdo3e6uh1" path="res://bg/PikPng.com_arbol-png_2565508.png" id="8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ne46s"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(224, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(112, 32, -112, 32, -112, -32, 112, -32)
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-112, 32, 112, 32, 112, -32, -112, -32)
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(112, -32, -112, -32, -112, 32, 112, 32)
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-112, -32, 112, -32, 112, 32, -112, 32)
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(32, 112, 32, -112, -32, -112, -32, 112)
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 112, -32, -112, 32, -112, 32, 112)
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(32, -112, 32, 112, -32, 112, -32, -112)
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -112, -32, 112, 32, 112, 32, -112)
+
+[sub_resource type="TileSet" id="2"]
+resource_local_to_scene = true
+tile_size = Vector2i(224, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ne46s")
+
+[sub_resource type="RectangleShape2D" id="11"]
+size = Vector2(76, 67.5)
+
+[sub_resource type="CapsuleShape2D" id="10"]
+radius = 25.0044
+height = 51.9912
+
+[node name="home" type="Node2D"]
+position = Vector2(-28, 281)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-48, 123)
+scale = Vector2(1, 0.52)
+
+[node name="parallbg1" type="ParallaxBackground" parent="StaticBody2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="StaticBody2D/parallbg1"]
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer"]
+position = Vector2(1659, 233)
+scale = Vector2(2.55218, 1.87059)
+texture = ExtResource("4")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="StaticBody2D/parallbg1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer2"]
+position = Vector2(2107, 395)
+scale = Vector2(0.497654, 0.548517)
+texture = ExtResource("8")
+
+[node name="Sprite2" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer2"]
+position = Vector2(10373, 449)
+scale = Vector2(0.497654, 0.548517)
+texture = ExtResource("8")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="StaticBody2D/parallbg1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer3"]
+position = Vector2(1025, -188)
+scale = Vector2(0.847516, 0.541176)
+texture = ExtResource("6")
+offset = Vector2(3477.22, 1007.07)
+
+[node name="Sprite2" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer3"]
+position = Vector2(7487, 465)
+scale = Vector2(0.847516, 0.541176)
+texture = ExtResource("6")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="StaticBody2D/parallbg1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer4"]
+position = Vector2(5460, 464)
+scale = Vector2(0.538801, 0.454665)
+texture = ExtResource("5")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="StaticBody2D/parallbg1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/parallbg1/ParallaxLayer5"]
+position = Vector2(13282, 499)
+scale = Vector2(0.538801, 0.454665)
+texture = ExtResource("7")
+
+[node name="TileMap" type="TileMap" parent="StaticBody2D"]
+tile_set = SubResource("2")
+format = 2
+
+[node name="parallelbg2" type="ParallaxBackground" parent="StaticBody2D"]
+layer = 1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="StaticBody2D/parallelbg2"]
+motion_mirroring = Vector2(3000, 0)
+
+[node name="1" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(57, 421.154)
+shape = SubResource("11")
+
+[node name="Actor" type="CharacterBody2D" parent="."]
+position = Vector2(-10663, 399)
+scale = Vector2(0.999864, 1)
+script = ExtResource("3")
+
+[node name="Hero" type="Sprite2D" parent="Actor"]
+position = Vector2(10929.3, -147.5)
+scale = Vector2(0.197026, 0.203704)
+texture = ExtResource("2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actor"]
+position = Vector2(10932.5, -146)
+shape = SubResource("10")
+
+[node name="Camera2D" type="Camera2D" parent="Actor/CollisionShape2D"]
+position = Vector2(41.993, -85)
